@@ -1,0 +1,5 @@
+{
+    "tasks": ["transcribe", "translate"], 
+    "models": ["tiny", "base", "small", "medium", "large"], 
+    "formats": ["txt", "vtt", "srt", "tsv", "json"]
+}
