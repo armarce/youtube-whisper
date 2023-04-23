@@ -40,7 +40,7 @@ class tasksController{
                 data: data 
             });
 
-        }catch{
+        }catch(error){
             
             return next(error);
 
