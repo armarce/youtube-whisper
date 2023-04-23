@@ -2,6 +2,7 @@ FROM cnstark/pytorch:1.13.0-py3.9.12-cuda11.7.1-ubuntu20.04
 
 
 ENV TZ=Asia/Dubai
+ENV PORT=4000
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get -y update
