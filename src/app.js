@@ -7,7 +7,7 @@ app.use(express.static(path.join(__dirname, '..', 'temp')));
 
 app.use(express.json());
 
-app.use('/v1', require('./routes/transcript.route.js'));
+app.use('/v1', require('./routes/tasks.route.js'));
 
 app.use(errorHandler);
 
