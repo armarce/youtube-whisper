@@ -2,6 +2,7 @@ const errors = {
 
     invalidTask: { status: 400, msg: 'Invalid task'},
     invalidModel: { status: 400, msg: 'Invalid model'},
+    invalidLang: { status: 400, msg: 'Invalid language'},
     invalidYoutubeId: { status: 400, msg: 'Invalid Youtube ID'},
     cantDownloadYoutube: { status: 500, msg: 'Cant download Youtube video'},
     cantTranscriptVideo: { status: 500, msg: 'Cant transcript video'}
