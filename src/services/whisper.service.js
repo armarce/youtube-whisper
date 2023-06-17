@@ -14,7 +14,7 @@ class whisperService{
 
             let { language, server_port } = req.query;
 
-            language = language ? language.toLowerCase() : null;
+            language = language ? language.toLowerCase() : "";
 
             const data = {};
 
@@ -32,13 +32,13 @@ class whisperService{
 
             }
 
-            if(!languages.includes(language)){
-
-                return next('invalidLang');
-
-            }else{
+            if(language.length === 2 && languages.includes(language)){
 
                 language = `--language ${language}`;
+
+            }else if(language.length > 0){
+
+                throw 'invalidLang';
 
             }
     
@@ -48,9 +48,9 @@ class whisperService{
 
             return data;
 
-        }catch{
+        }catch(error){
 
-            throw 'cantTranscriptVideo'
+            throw error
 
         }
 
