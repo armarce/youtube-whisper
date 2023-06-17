@@ -1,5 +1,6 @@
 {
     "tasks": ["transcribe", "translate"], 
     "models": ["tiny", "base", "small", "medium", "large"], 
+    "languages": ["Spanish", "Italian", "English", "Portuguese", "German"], 
     "formats": ["txt", "vtt", "srt", "tsv", "json"]
 }
