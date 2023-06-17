@@ -14,6 +14,8 @@ class whisperService{
 
             let { language, server_port } = req.query;
 
+            language = language ? language.toLowerCase() : null;
+
             const data = {};
 
             formats.forEach(format => {
