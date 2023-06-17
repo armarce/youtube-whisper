@@ -17,6 +17,11 @@ RUN curl -sL https://deb.nodesource.com/setup_19.x | sudo -E bash -
 RUN apt-get install -y nodejs
 
 WORKDIR /app
+
+RUN git clone https://github.com/armarce/youtube-whisper.git
+
+WORKDIR /app/youtube-whisper
+
 COPY package*.json ./
 RUN npm install && npm install pm2 -g
 COPY . .
